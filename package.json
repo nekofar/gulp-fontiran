@@ -1,13 +1,13 @@
 {
   "name": "gulp-fontiran",
   "version": "1.0.0",
-  "description": "Download fonts from Font iran",
+  "description": "Download fonts from Fontiran",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Milad Nekofar",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
   },
   "devDependencies": {
