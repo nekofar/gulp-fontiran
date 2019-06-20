@@ -35,5 +35,8 @@
   },
   "devDependencies": {
     "gulp": "^4.0.2"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
