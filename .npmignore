@@ -94,12 +94,9 @@ typings/
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
-.idea/**/workspace.xml
+.idea
 .idea/**/tasks.xml
 .idea/**/usage.statistics.xml
-.idea/**/dictionaries
-.idea/**/shelf
-
 # Generated files
 .idea/**/contentModel.xml
 
@@ -158,4 +155,3 @@ fabric.properties
 
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
-
