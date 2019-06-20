@@ -24,6 +24,8 @@ npm install --save gulp-fontiran
 
 ## Usage
 
+You need to create a `.env` file inside the root of your project and add `FI_USER` and `FI_PASS` keys, populated by your username and password.
+
 ```js
 var gulp = require('gulp');
 var unzip = require('gulp-unzip');
