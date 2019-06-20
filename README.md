@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to gulp-fontiran 👋</h1>
+# gulp-fontiran 
 <p>
   <img src="https://img.shields.io/badge/version-1.0.2-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/nekofar/gulp-fontiran#readme">
@@ -25,8 +25,10 @@ npm install --save gulp-fontiran
 Or add this package to your `package.json` file:
 
 ```json
-"dependencies": {
-    "gulp-fontiran": "^1.0.2"
+{
+    "dependencies": {
+        "gulp-fontiran": "^1.0.2"
+    }
 }
 ```
 
@@ -50,8 +52,8 @@ gulp.task('fonts', function () {
 
 👤 Milad Nekofar
 
-* Twitter: [@nekofar](https://twitter.com/nekofar)
 * Github: [@nekofar](https://github.com/nekofar)
+* Twitter: [@nekofar](https://twitter.com/nekofar)
 
 ## 🤝 Contributing
 
