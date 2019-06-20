@@ -1,6 +1,6 @@
 # gulp-fontiran 
 <p>
-  <img src="https://img.shields.io/badge/version-1.0.2-blue.svg?cacheSeconds=2592000" />
+  <img src="https://img.shields.io/badge/version-1.0.3-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/nekofar/gulp-fontiran#readme">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" target="_blank" />
   </a>
@@ -27,7 +27,7 @@ Or add this package to your `package.json` file:
 ```json
 {
     "dependencies": {
-        "gulp-fontiran": "^1.0.2"
+        "gulp-fontiran": "^1.0.3"
     }
 }
 ```
