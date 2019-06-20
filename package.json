@@ -1,6 +1,6 @@
 {
   "name": "gulp-fontiran",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Download fonts from Fontiran",
   "main": "index.js",
   "scripts": {
@@ -31,7 +31,6 @@
     "event-stream": "^4.0.1",
     "plugin-error": "latest",
     "request": "^2.88.0",
-    "through2": "latest",
     "vinyl": "^2.2.0"
   },
   "devDependencies": {
