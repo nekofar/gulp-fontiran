@@ -6,7 +6,7 @@ var async = require('async');
 var request = require('request');
 var Vinyl = require('vinyl');
 
-var PluginError = require('gulp-error');
+var PluginError = require('plugin-error');
 
 var PLUGIN_NAME = 'gulp-fontiran';
 
@@ -14,8 +14,8 @@ module.exports = function (slug) {
     'use strict';
 
     // Make sure font slug passed
-    if (!slug || slug === "") {
-        new PluginError(PLUGIN_NAME, 'font slug missing.');
+    if (!slug) {
+        throw new PluginError(PLUGIN_NAME, 'font slug missing.', { showStack: false });
     }
 
     return through.obj(function (file, enc, callback) {
@@ -29,12 +29,12 @@ module.exports = function (slug) {
         // Load configs from dotenv file
         var config = dotenv.config({path: file.path});
         if (config.error) {
-            new PluginError(PLUGIN_NAME, 'dotenv config file missing.');
+            throw new PluginError(PLUGIN_NAME, 'dotenv config file missing.');
         }
 
         // Get font info using slug
         if (typeof fonts[slug] === 'undefined') {
-            new PluginError(PLUGIN_NAME, 'font not found.');
+            throw new PluginError(PLUGIN_NAME, 'font not found.');
         }
 
         // Options
