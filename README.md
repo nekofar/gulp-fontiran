@@ -22,6 +22,14 @@
 npm install --save gulp-fontiran
 ```
 
+Or add this package to your `package.json` file:
+
+```json
+"dependencies": {
+    "gulp-fontiran": "^1.0.2"
+}
+```
+
 ## Usage
 
 You need to create a `.env` file inside the root of your project and add `FI_USER` and `FI_PASS` keys, populated by your username and password.
