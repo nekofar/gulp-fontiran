@@ -1,6 +1,6 @@
 var fonts = require('./fonts.json');
 
-var through = require('through2');
+var es = require('event-stream');
 var dotenv = require('dotenv');
 var async = require('async');
 var request = require('request');
@@ -10,21 +10,19 @@ var PluginError = require('plugin-error');
 
 var PLUGIN_NAME = 'gulp-fontiran';
 
-module.exports = function (slug) {
+module.exports = function (slugs) {
     'use strict';
 
     // Make sure font slug passed
-    if (!slug) {
+    if (!slugs) {
         throw new PluginError(PLUGIN_NAME, 'font slug missing.', { showStack: false });
     }
 
-    return through.obj(function (file, enc, callback) {
-        var self = this;
+    if (!Array.isArray(slugs)) {
+        slugs = [slugs];
+    }
 
-        if (file.isNull()) {
-            self.push(file);
-            return callback();
-        }
+    return es.readArray(slugs).pipe(es.map(function(slug, callback) {
 
         // Load configs from dotenv file
         var config = dotenv.config();
@@ -123,15 +121,14 @@ module.exports = function (slug) {
                     data.push(chunk);
                 })
                 .on('end', function () {
-                    self.push(new Vinyl({
+                    callback(null, new Vinyl({
                         path: file,
                         contents: Buffer.concat(data)
                     }));
-                    callback(null);
                 });
         }
 
         async.waterfall([loginToSite, fetchFontLink, fetchFontPack], callback);
 
-    });
+    }));
 };

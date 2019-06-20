@@ -28,10 +28,11 @@
   "dependencies": {
     "async": "^3.0.1",
     "dotenv": "^8.0.0",
+    "event-stream": "^4.0.1",
+    "plugin-error": "latest",
     "request": "^2.88.0",
     "through2": "latest",
-    "vinyl": "^2.2.0",
-    "plugin-error": "latest"
+    "vinyl": "^2.2.0"
   },
   "devDependencies": {
     "gulp": "^4.0.2"
