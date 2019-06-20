@@ -1,7 +1,7 @@
 {
   "name": "gulp-fontiran",
   "version": "1.0.2",
-  "description": "Download fonts from Fontiran",
+  "description": "Download purchased fonts from Fontiran",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
