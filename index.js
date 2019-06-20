@@ -15,9 +15,10 @@ module.exports = function (slugs) {
 
     // Make sure font slug passed
     if (!slugs) {
-        throw new PluginError(PLUGIN_NAME, 'font slug missing.', { showStack: false });
+        throw new PluginError(PLUGIN_NAME, 'Font slug is missing.');
     }
 
+    // Convert strings to array
     if (!Array.isArray(slugs)) {
         slugs = [slugs];
     }
@@ -26,13 +27,13 @@ module.exports = function (slugs) {
 
         // Load configs from dotenv file
         var config = dotenv.config();
-        if (config.error) {
-            this.emit('error', new PluginError(PLUGIN_NAME, '.env config file missing.'));
+        if (!config) {
+            callback(new PluginError(PLUGIN_NAME, '.env config is file missing.'));
         }
 
         // Make sure font iran login info defined
         if (typeof process.env.FI_USER === 'undefined' || typeof process.env.FI_PASS === 'undefined') {
-            this.emit('error', new PluginError(PLUGIN_NAME, '.env config fontiran login data missing.'));
+            callback(new PluginError(PLUGIN_NAME, '.env config fontiran login data missing.'));
         }
 
         // Get font info using slug
@@ -130,5 +131,5 @@ module.exports = function (slugs) {
 
         async.waterfall([loginToSite, fetchFontLink, fetchFontPack], callback);
 
-    }));
+    })).on('error', console.log);
 };
