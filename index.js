@@ -1,17 +1,17 @@
-'use strict';
-
 var fonts = require('./fonts.json');
 
 var through = require('through2');
 var dotenv = require('dotenv');
 var async = require('async');
 var request = require('request');
+var Vinyl = require('vinyl');
 
 var PluginError = require('gulp-error');
 
 var PLUGIN_NAME = 'gulp-fontiran';
 
 module.exports = function (slug) {
+    'use strict';
 
     // Make sure font slug passed
     if (!slug || slug === "") {
@@ -94,7 +94,39 @@ module.exports = function (slug) {
             });
         }
 
-        async.waterfall([loginToSite, fetchFontLink], callback);
+        /**
+         * Fetch font file from temporary url
+         *
+         * @param url
+         * @param callback
+         */
+        function fetchFontPack(url, callback) {
+            var file = "";
+            var data = [];
+            request.get({url: url})
+                .on('response', function (response) {
+                    // console.log(response.statusCode);
+                    // console.log(response.headers['content-disposition']);
+
+                    var disposition = response.headers['content-disposition'];
+                    var matches = /filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/.exec(disposition);
+                    if (matches != null && matches[1]) {
+                        file = matches[1].replace(/['"]/g, '');
+                    }
+                })
+                .on('data', function (chunk) {
+                    data.push(chunk);
+                })
+                .on('end', function () {
+                    self.push(new Vinyl({
+                        path: file,
+                        contents: Buffer.concat(data)
+                    }));
+                    callback(null);
+                });
+        }
+
+        async.waterfall([loginToSite, fetchFontLink, fetchFontPack], callback);
 
     });
 };
