@@ -25,9 +25,14 @@
   },
   "homepage": "https://github.com/nekofar/gulp-fontiran",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "gulp-error": "^0.1.4",
+    "through2": "latest",
+    "dotenv": "^8.0.0",
+    "async": "^3.0.1",
+    "request": "^2.88.0"
+  },
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-error": "^0.1.4"
+    "gulp": "^4.0.2"
   }
 }
