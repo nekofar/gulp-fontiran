@@ -53,9 +53,9 @@ module.exports = function (slugs) {
         /**
          * Login to site and pass the cookie
          *
-         * @param callback
+         * @param next
          */
-        function loginToSite(callback) {
+        function loginToSite(next) {
             var jar = request.jar();
             var form = {
                 log: opts.username,
@@ -68,8 +68,11 @@ module.exports = function (slugs) {
                 form: form,
                 jar: jar
             }, function (error, response, body) {
-
-                callback(null, jar);
+                if (!error && response.statusCode === 200) {
+                    next(null, jar);
+                } else {
+                    callback(new PluginError(PLUGIN_NAME, 'Login process to the fontiran failed.'));
+                }
             });
         }
 
@@ -77,9 +80,9 @@ module.exports = function (slugs) {
          * Fetch the temporary download link of the font
          *
          * @param jar
-         * @param callback
+         * @param next
          */
-        function fetchFontLink(jar, callback) {
+        function fetchFontLink(jar, next) {
             var form = {
                 type: 'downloadRequest',
                 action: 'my_action',
@@ -93,7 +96,9 @@ module.exports = function (slugs) {
             }, function (error, response, body) {
                 if (body && body.message) {
                     var url = body.message.match(/(\bhttps?:\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/i);
-                    callback(null, url[0]);
+                    next(null, url[0]);
+                } else {
+                    callback(new PluginError(PLUGIN_NAME, 'Fetch font temporary link failed.'));
                 }
             });
         }
@@ -102,30 +107,35 @@ module.exports = function (slugs) {
          * Fetch font file from temporary url
          *
          * @param url
-         * @param callback
+         * @param next
          */
-        function fetchFontPack(url, callback) {
+        function fetchFontPack(url, next) {
             var file = "";
             var data = [];
             request.get({url: url})
                 .on('response', function (response) {
-                    // console.log(response.statusCode);
-                    // console.log(response.headers['content-disposition']);
-
-                    var disposition = response.headers['content-disposition'];
-                    var matches = /filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/.exec(disposition);
-                    if (matches != null && matches[1]) {
-                        file = matches[1].replace(/['"]/g, '');
+                    // Make sure request was successful and content of page is not html
+                    if (response.statusCode !== 200 || response.headers['content-type'].indexOf('text/html') !== -1) {
+                        callback(new PluginError(PLUGIN_NAME, 'Problem in font temporary link.'));
+                    } else {
+                        // Extract file name from header disposition
+                        var disposition = response.headers['content-disposition'];
+                        var matches = /filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/.exec(disposition);
+                        if (matches != null && matches[1]) {
+                            file = matches[1].replace(/['"]/g, '');
+                        }
                     }
                 })
                 .on('data', function (chunk) {
                     data.push(chunk);
                 })
                 .on('end', function () {
-                    callback(null, new Vinyl({
-                        path: file,
-                        contents: Buffer.concat(data)
-                    }));
+                    if (file) {
+                        callback(null, new Vinyl({
+                            path: file,
+                            contents: Buffer.concat(data)
+                        }));
+                    }
                 });
         }
 
