@@ -19,7 +19,7 @@
 ## Install
 
 ```sh
-npm install --save gulp-fontiran
+npm install --save @nekofar/gulp-fontiran
 ```
 
 Or add this package to your `package.json` file:
@@ -27,7 +27,7 @@ Or add this package to your `package.json` file:
 ```json
 {
     "dependencies": {
-        "gulp-fontiran": "^1.0.3"
+        "@nekofar/gulp-fontiran": "^1.0.3"
     }
 }
 ```
