@@ -38,7 +38,7 @@ module.exports = function (slugs) {
 
         // Get font info using slug
         if (typeof fonts[slug] === 'undefined') {
-            this.emit('error', new PluginError(PLUGIN_NAME, 'No font was found with this slug.'));
+            callback(new PluginError(PLUGIN_NAME, 'No font was found with this slug.'));
         }
 
         // Options
