@@ -27,14 +27,19 @@ module.exports = function (slug) {
         }
 
         // Load configs from dotenv file
-        var config = dotenv.config({path: file.path});
+        var config = dotenv.config();
         if (config.error) {
-            throw new PluginError(PLUGIN_NAME, 'dotenv config file missing.');
+            this.emit('error', new PluginError(PLUGIN_NAME, '.env config file missing.'));
+        }
+
+        // Make sure font iran login info defined
+        if (typeof process.env.FI_USER === 'undefined' || typeof process.env.FI_PASS === 'undefined') {
+            this.emit('error', new PluginError(PLUGIN_NAME, '.env config fontiran login data missing.'));
         }
 
         // Get font info using slug
         if (typeof fonts[slug] === 'undefined') {
-            throw new PluginError(PLUGIN_NAME, 'font not found.');
+            this.emit('error', new PluginError(PLUGIN_NAME, 'No font was found with this slug.'));
         }
 
         // Options
