@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nekofar/gulp-fontiran.git"
+    "url": "git+ssh://git@github.com:nekofar/gulp-fontiran.git"
   },
   "bugs": {
     "url": "https://github.com/nekofar/gulp-fontiran/issues"
