@@ -4,6 +4,7 @@
   "description": "Download purchased fonts from Fontiran",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -34,6 +35,8 @@
     "vinyl": "^2.2.0"
   },
   "devDependencies": {
+    "eslint": "^6.0.0",
+    "eslint-config-gulp": "^3.0.1",
     "gulp": "^4.0.2"
   },
   "publishConfig": {
