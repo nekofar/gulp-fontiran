@@ -2,30 +2,32 @@
   "name": "@nekofar/gulp-fontiran",
   "version": "1.0.3",
   "description": "Download purchased fonts from Fontiran",
-  "main": "index.js",
-  "scripts": {
-    "lint": "eslint .",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "homepage": "https://github.com/nekofar/gulp-fontiran",
+  "author": "Milad Nekofar <milad@nekofar.com>",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/nekofar/gulp-fontiran.git"
   },
-  "keywords": [
-    "gulpplugin",
-    "gulp",
-    "font",
-    "fontiran"
-  ],
-  "author": {
-    "name": "Milad Nekofar",
-    "email": "milad@nekofar.com"
-  },
   "bugs": {
     "url": "https://github.com/nekofar/gulp-fontiran/issues"
   },
-  "homepage": "https://github.com/nekofar/gulp-fontiran",
-  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "engines": {
+    "node": ">= 0.10"
+  },
+  "main": "index.js",
+  "files": [
+    "LICENSE",
+    "index.js",
+    "fonts.json"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "async": "^3.0.1",
     "dotenv": "^8.0.0",
@@ -39,7 +41,11 @@
     "eslint-config-gulp": "^3.0.1",
     "gulp": "^4.0.2"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  }
+  "keywords": [
+    "gulpplugin",
+    "gulp",
+    "font",
+    "asset",
+    "fontiran"
+  ]
 }
