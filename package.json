@@ -3,8 +3,12 @@
   "version": "1.0.3",
   "description": "Download purchased fonts from Fontiran",
   "homepage": "https://github.com/nekofar/gulp-fontiran",
-  "author": "Milad Nekofar <milad@nekofar.com>",
   "license": "MIT",
+  "author": {
+    "name": "Milad Nekofar",
+    "email": "milad@nekofar.com",
+    "url": "http://milad.nekofar.com/"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/nekofar/gulp-fontiran.git"
@@ -25,8 +29,9 @@
     "fonts.json"
   ],
   "scripts": {
+    "test": "mocha",
     "lint": "eslint .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pretest": "npm run lint"
   },
   "dependencies": {
     "async": "^3.0.1",
@@ -39,7 +44,8 @@
   "devDependencies": {
     "eslint": "^6.0.0",
     "eslint-config-gulp": "^3.0.1",
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "mocha": "^6.1.4"
   },
   "keywords": [
     "gulpplugin",
