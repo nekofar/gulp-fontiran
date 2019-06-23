@@ -17,7 +17,7 @@
     "url": "https://github.com/nekofar/gulp-fontiran/issues"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://registry.npmjs.org/"
   },
   "engines": {
     "npm": ">=6.4.1",
