@@ -119,7 +119,7 @@ module.exports = function(slugs) {
       }, function(error, response, body) {
         if (body && body.message) {
           var pattern = '(\\bhttps?:\\/\\/[-A-Z0-9+&@#\\/%?=~_|!:,.;]' +
-                        '*[-A-Z0-9+&@#\\/%=~_|])';
+            '*[-A-Z0-9+&@#\\/%=~_|])';
           var matches = new RegExp(pattern, 'i').exec(body.message);
           next(null, matches[0]);
         } else {
@@ -145,7 +145,7 @@ module.exports = function(slugs) {
         .on('response', function(response) {
           // Make sure request was successful and content of page is not html
           if (response.statusCode !== 200 ||
-              response.headers['content-type'].indexOf('text/html') !== -1) {
+            response.headers['content-type'].indexOf('text/html') !== -1) {
             var err = new PluginError({
               plugin: PLUGIN_NAME,
               message: 'Problem in font temporary link.',
@@ -176,5 +176,7 @@ module.exports = function(slugs) {
 
     async.waterfall([loginToSite, fetchFontLink, fetchFontPack], callback);
 
-  })).on('error', console.log);
+  })).on('error', function(error) {
+    console.log(error.toString());
+  });
 };
