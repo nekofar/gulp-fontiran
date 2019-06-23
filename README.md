@@ -1,9 +1,22 @@
 # gulp-fontiran 
-[![Build Status](https://travis-ci.com/nekofar/gulp-fontiran.svg?branch=master)](https://travis-ci.com/nekofar/gulp-fontiran)
-[![Packages](https://img.shields.io/badge/version-1.0.5-blue.svg?cacheSeconds=2592000)](https://github.com/nekofar/gulp-fontiran/packages) 
-[![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg) ](https://github.com/nekofar/gulp-fontiran#readme) 
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg) ](https://github.com/nekofar/gulp-fontiran/graphs/commit-activity) 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/nekofar/gulp-fontiran/blob/master/LICENSE)
+<p>
+  <a href="https://www.npmjs.com/package/@nekofar/gulp-fontiran">
+    <img src="https://img.shields.io/badge/version-1.0.5-blue.svg?cacheSeconds=2592000" alt="Packages" />
+  </a>
+  <a href="https://travis-ci.com/nekofar/gulp-fontiran">
+    <img src="https://travis-ci.com/nekofar/gulp-fontiran.svg?branch=master" alt="Build Status" />
+  </a>
+  <a href="https://github.com/nekofar/gulp-fontiran#readme">
+    <img src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" alt="Documentation" /> 
+  </a>
+  <a href="https://github.com/nekofar/gulp-fontiran/graphs/commit-activity">
+    <img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" alt="Maintenance" /> 
+  </a>
+  <a href="https://github.com/nekofar/gulp-fontiran/blob/master/LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" />
+  </a>
+  
+</p>
 
 > Download purchased fonts from Fontiran
 
