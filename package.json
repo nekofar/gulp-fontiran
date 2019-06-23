@@ -1,6 +1,6 @@
 {
   "name": "@nekofar/gulp-fontiran",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Download purchased fonts from Fontiran",
   "homepage": "https://github.com/nekofar/gulp-fontiran",
   "license": "MIT",
@@ -49,7 +49,6 @@
     "mocha": "^6.1.4",
     "nyc": "^14.1.1"
   },
-
   "keywords": [
     "gulpplugin",
     "gulp",

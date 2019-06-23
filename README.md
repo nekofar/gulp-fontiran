@@ -1,16 +1,9 @@
 # gulp-fontiran 
-<p>
-  <img src="https://img.shields.io/badge/version-1.0.3-blue.svg?cacheSeconds=2592000" />
-  <a href="https://github.com/nekofar/gulp-fontiran#readme">
-    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" target="_blank" />
-  </a>
-  <a href="https://github.com/nekofar/gulp-fontiran/graphs/commit-activity">
-    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" target="_blank" />
-  </a>
-  <a href="https://github.com/nekofar/gulp-fontiran/blob/master/LICENSE">
-    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" target="_blank" />
-  </a>
-</p>
+[![Build Status](https://travis-ci.com/nekofar/gulp-fontiran.svg?branch=master)](https://travis-ci.com/nekofar/gulp-fontiran)
+[![Packages](https://img.shields.io/badge/version-1.0.5-blue.svg?cacheSeconds=2592000)](https://github.com/nekofar/gulp-fontiran/packages) 
+[![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg) ](https://github.com/nekofar/gulp-fontiran#readme) 
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg) ](https://github.com/nekofar/gulp-fontiran/graphs/commit-activity) 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/nekofar/gulp-fontiran/blob/master/LICENSE)
 
 > Download purchased fonts from Fontiran
 
@@ -27,7 +20,7 @@ Or add this package to your `package.json` file:
 ```json
 {
     "dependencies": {
-        "@nekofar/gulp-fontiran": "^1.0.3"
+        "@nekofar/gulp-fontiran": "^1.0.5"
     }
 }
 ```
