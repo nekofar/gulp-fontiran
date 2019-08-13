@@ -1,6 +1,6 @@
 'use strict';
 
-var fonts = require('./fonts.json');
+var fonts = require('../fonts.json');
 
 var es = require('event-stream');
 var dotenv = require('dotenv');

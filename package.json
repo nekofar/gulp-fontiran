@@ -23,10 +23,10 @@
     "npm": ">=6.4.1",
     "node": ">=8.16.0"
   },
-  "main": "index.js",
+  "main": "src/index.js",
   "files": [
     "LICENSE",
-    "index.js",
+    "src/index.js",
     "fonts.json"
   ],
   "scripts": {
