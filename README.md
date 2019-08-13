@@ -45,7 +45,7 @@ You need to create a `.env` file inside the root of your project and add `FI_USE
 ```js
 var gulp = require('gulp');
 var unzip = require('gulp-unzip');
-var fontiran = require('gulp-fontiran');
+var fontiran = require('src/index');
 
 gulp.task('fonts', function () {
     return fontiran(['kamva', 'iran'])
