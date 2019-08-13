@@ -10,6 +10,7 @@ import PluginError from 'plugin-error';
 
 const PLUGIN_NAME = 'gulp-fontiran';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 module.exports = (slugs: string[]): any => {
 
     // Make sure font slug passed
@@ -30,6 +31,7 @@ module.exports = (slugs: string[]): any => {
      * @param slug
      * @param callback
      */
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     function getFontBySlug(slug: string, callback: any): void {
 
         let opts: {
@@ -152,6 +154,7 @@ module.exports = (slugs: string[]): any => {
          */
         function fetchFontPack(url: string, next: Function): void {
             let file: string;
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             let data: any[] = [];
             request.get({url: url})
                 .on('response', (response): void => {
