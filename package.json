@@ -23,12 +23,7 @@
     "npm": ">=6.4.1",
     "node": ">=8.16.0"
   },
-  "main": "index.js",
-  "files": [
-    "LICENSE",
-    "index.js",
-    "fonts.json"
-  ],
+  "main": "dist/index.js",
   "scripts": {
     "test": "nyc mocha",
     "lint": "eslint .",
@@ -43,11 +38,18 @@
     "vinyl": "^2.2.0"
   },
   "devDependencies": {
-    "eslint": "^6.0.0",
+    "@types/async": "^3.0.1",
+    "@types/dotenv": "^6.1.1",
+    "@types/event-stream": "^3.3.34",
+    "@types/node": "^12.7.1",
+    "@types/request": "^2.48.2",
+    "@types/vinyl": "^2.0.3",
+    "@typescript-eslint/eslint-plugin": "^1.13.0",
+    "@typescript-eslint/parser": "^1.13.0",
+    "eslint": "^6.1.0",
     "eslint-config-gulp": "^3.0.1",
     "gulp": "^4.0.2",
-    "mocha": "^6.1.4",
-    "nyc": "^14.1.1"
+    "typescript": "^3.5.3"
   },
   "keywords": [
     "gulpplugin",
@@ -55,5 +57,17 @@
     "font",
     "asset",
     "fontiran"
-  ]
+  ],
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "rules": {
+    }
+  }
 }
