@@ -21,13 +21,18 @@
   },
   "engines": {
     "npm": ">=6.4.1",
-    "node": ">=8.16.0"
+    "node": ">=8.16.0",
+    "yarn": "^1.0"
   },
   "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "nyc mocha",
+    "build": "yarn clean && tsc",
+    "clean": "rm -rf ./dist/",
     "lint": "eslint ./src/**/*.ts",
-    "pretest": "npm run lint"
+    "pretest": "yarn run lint"
   },
   "dependencies": {
     "async": "^3.0.1",
