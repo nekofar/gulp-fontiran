@@ -31,8 +31,7 @@
   "scripts": {
     "build": "yarn clean && tsc",
     "clean": "rm -rfv ./dist/",
-    "lint": "eslint ./src/**/*.ts",
-    "pretest": "yarn run lint"
+    "lint": "eslint ./src/**/*.ts"
   },
   "dependencies": {
     "async": "^3.0.1",
