@@ -1,6 +1,6 @@
 {
   "name": "@nekofar/gulp-fontiran",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Download purchased fonts from Fontiran",
   "homepage": "https://github.com/nekofar/gulp-fontiran",
   "license": "MIT",
@@ -62,17 +62,5 @@
     "font",
     "asset",
     "fontiran"
-  ],
-  "eslintConfig": {
-    "parser": "@typescript-eslint/parser",
-    "extends": [
-      "plugin:@typescript-eslint/recommended"
-    ],
-    "parserOptions": {
-      "ecmaVersion": 2018,
-      "sourceType": "module"
-    },
-    "rules": {
-    }
-  }
+  ]
 }
