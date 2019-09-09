@@ -1,8 +1,11 @@
 sudo: false
+
 language: node_js
+
 node_js:
   - '12'
   - '10'
   - '8'
-after_script:
-  - npm run lint
+
+before_script:
+  - yarn lint

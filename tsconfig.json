@@ -13,6 +13,10 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "baseUrl": ".",
+    "types": [
+      "mocha",
+      "chai",
+    ],
     "paths": {
       "@/*": [
         "src/*"
