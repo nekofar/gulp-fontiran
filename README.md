@@ -2,6 +2,7 @@
 
 [![Packages](https://img.shields.io/badge/version-1.0.5-blue.svg?cacheSeconds=2592000)][1]
 [![Build Status](https://travis-ci.com/nekofar/gulp-fontiran.svg?branch=master) ][2]
+[![Codecov](https://img.shields.io/codecov/c/gh/nekofar/gulp-fontiran.svg)][7]
 [![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg) ][3]
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg) ][4]
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)][5]
@@ -58,3 +59,5 @@ _This README was generated with ❤️ by [readme-md-generator](https://github.c
 [4]: https://github.com/nekofar/gulp-fontiran/graphs/commit-activity
 [5]: https://github.com/nekofar/gulp-fontiran/blob/master/LICENSE
 [6]: http://twitter.com/nekofar
+[7]: https://codecov.io/gh/nekofar/gulp-fontiran
+
