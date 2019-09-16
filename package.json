@@ -32,8 +32,9 @@
     "build": "yarn clean && tsc",
     "clean": "rm -rfv ./dist/",
     "lint": "eslint ./src/**/*.ts",
-    "test:e2e": "cypress .",
-    "test:unit": "mocha ."
+    "test": "yarn lint && nyc mocha --require source-map-support/register --recursive dist",
+    "codecov": "nyc report --reporter=json && codecov -f coverage/*.json",
+    "posttest": "yarn codecov"
   },
   "dependencies": {
     "async": "^3.0.1",
@@ -56,11 +57,14 @@
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "^1.13.0",
     "chai": "^4.2.0",
+    "codecov": "^3.5.0",
     "cypress": "^3.4.1",
     "eslint": "^6.1.0",
     "eslint-config-gulp": "^3.0.1",
     "gulp": "^4.0.2",
     "mocha": "^6.2.0",
+    "nyc": "^14.1.1",
+    "source-map-support": "^0.5.13",
     "typescript": "^3.5.3"
   },
   "keywords": [
@@ -69,5 +73,18 @@
     "font",
     "asset",
     "fontiran"
-  ]
+  ],
+  "nyc": {
+    "extension": [
+      ".ts",
+      ".tsx"
+    ],
+    "exclude": [
+      "**/*.d.ts"
+    ],
+    "reporter": [
+      "html"
+    ],
+    "all": true
+  }
 }
