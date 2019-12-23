@@ -63,7 +63,7 @@
     "eslint-config-gulp": "^3.0.1",
     "gulp": "^4.0.2",
     "mocha": "^6.2.0",
-    "nyc": "^14.1.1",
+    "nyc": "^15.0.0",
     "ts-node": "^8.4.1",
     "typescript": "^3.5.3",
     "typings": "^2.1.1"
