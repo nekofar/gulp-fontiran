@@ -301,10 +301,12 @@ agent-base@2:
     extend "~3.0.0"
     semver "~5.0.1"
 
-agent-base@5:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/agent-base/-/agent-base-5.1.1.tgz#e8fb3f242959db44d63be665db7a8e739537a32c"
-  integrity sha512-TMeqbNl2fMW0nMjTEPOwe3J/PRFP4vqeoNuQMG0HlMrtm5QxKqdvAkZ1pRBQ/ulIyDD5Yq0nJ7YbdD8ey0TO3g==
+agent-base@6:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/agent-base/-/agent-base-6.0.0.tgz#5d0101f19bbfaed39980b22ae866de153b93f09a"
+  integrity sha512-j1Q7cSCqN+AwrmDd+pzgqc0/NpC655x2bUf5ZjRIO77DcNBFmh+OgRNzF6OKdCC9RSCb19fGd99+bhXFdkRNqw==
+  dependencies:
+    debug "4"
 
 agent-base@^4.3.0:
   version "4.3.0"
@@ -2491,12 +2493,12 @@ http-proxy-agent@^1.0.0:
     debug "2"
     extend "3"
 
-http-proxy-agent@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/http-proxy-agent/-/http-proxy-agent-3.0.0.tgz#598f42dc815949a11e2c6dbfdf24cd8a4c165327"
-  integrity sha512-uGuJaBWQWDQCJI5ip0d/VTYZW0nRrlLWXA4A7P1jrsa+f77rW2yXz315oBt6zGCF6l8C2tlMxY7ffULCj+5FhA==
+http-proxy-agent@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/http-proxy-agent/-/http-proxy-agent-4.0.0.tgz#6b74d332e1934a1107b97e97de4a00e267c790fe"
+  integrity sha512-GX0FA6+IcDf4Oxc/FBWgYj4zKgo/DnZrksaG9jyuQLExs6xlX+uI5lcA8ymM3JaZTRrF/4s2UX19wJolyo7OBA==
   dependencies:
-    agent-base "5"
+    agent-base "6"
     debug "4"
 
 http-signature@~1.2.0:
