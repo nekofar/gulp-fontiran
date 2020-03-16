@@ -43,7 +43,8 @@
     "http-proxy-agent": "^4.0.0",
     "plugin-error": "latest",
     "request": "^2.88.0",
-    "vinyl": "^2.2.0"
+    "vinyl": "^2.2.0",
+    "minimist": "~1.2.5"
   },
   "devDependencies": {
     "@types/async": "^3.0.1",
