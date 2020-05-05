@@ -61,7 +61,7 @@
     "chai": "^4.2.0",
     "codecov": "^3.5.0",
     "eslint": "^6.1.0",
-    "eslint-config-gulp": "^3.0.1",
+    "eslint-config-gulp": "^4.0.0",
     "gulp": "^4.0.2",
     "mocha": "^7.0.0",
     "nyc": "^15.0.0",
