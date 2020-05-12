@@ -157,9 +157,9 @@
   integrity sha512-KYyTT/T6ALPkIRd2Ge080X/BsXvy9O0hcWTtMWkPvwAwF99+vn6Dv4GzrFT/Nn1LePr+FFDbRXXlqmsy9lw2zA==
 
 "@types/async@^3.0.1":
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/@types/async/-/async-3.2.1.tgz#14dd3f50b1e664ee834a5efdd3c9895f56c1649b"
-  integrity sha512-r/lKpgD0b4dz/relMdFUhhSSgP4UmbrEEsxxFMSZkIbbDF2Tehs6xUHlFHGVVFQDfhCoBUqX94vjCNIqbcU21A==
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/@types/async/-/async-3.2.2.tgz#fb88863de202997d187d544b4159febde002e3b1"
+  integrity sha512-lNRKopTpIjfxHbdyscLxWTcKud6wuvhTH3ip81ru2B1eo3TUN/QI775seKv4kRMxBHEhndwV9ABzaBpD018PyQ==
 
 "@types/caseless@*":
   version "0.12.2"
