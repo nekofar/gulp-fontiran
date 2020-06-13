@@ -160,3 +160,4 @@ typings/
 .dynamodb/
 
 /dist/
+.idea
