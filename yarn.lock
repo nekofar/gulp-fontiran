@@ -1206,9 +1206,9 @@ escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
   integrity sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
 
 eslint-config-gulp@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-gulp/-/eslint-config-gulp-5.0.0.tgz#fa85fb20637ccaa279e71dc7480770e35a7e00d0"
-  integrity sha512-9QAdiYcGxxYnfho1IDZP6AQm/QBOh1RQGeWNV8sA63iAA6ySzgxhsssV5YtuEB9q/PiD3c8IOxT2BhAP4htVHw==
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-gulp/-/eslint-config-gulp-5.0.1.tgz#e82bce9ab8248f3e838dbf76648be49c3d501932"
+  integrity sha512-SBC+BscsJ6hkUgXE+9naDOIG1hsLarpvWktGoZoS5kYSZhJuEfjGABJub3evYJ7Qv1ZJPCeEDI4Zpg+DxiyDLA==
   dependencies:
     eslint-config-prettier "^6.11.0"
     eslint-plugin-node "^11.1.0"
